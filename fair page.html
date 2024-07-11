@@ -1,0 +1,363 @@
+<html>
+    <head>
+        <title>FairPage</title> 
+    </head>
+    <body>
+        <div id="head">
+        
+            <label>From -> </label>
+        
+        <select name="from" id="from">
+            <option>Select From Station</option>
+            <option value="1">Wimco Nagar Depot Metro</option>
+            <option value="2">Wimco Nagar Metro</option>
+            <option value="3">Thiruvotriyur Metro</option>
+            <option value="4">Thiruvottriyur Theradi Metro</option>
+            <option value="5">Kalaidipet Metro</option>
+            <option value="6">Tollgate Metro</option>
+            <option value="7">New Washermenpet Metro</option>
+            <option value="8">Tondiarpet Metro</option>
+            <option value="9">Thiyagaraya College Metro</option>
+            <option value="10">Washermenpet Metro</option>
+            <option value="11">Manadi Metro</option>
+            <option value="12">High Court Metro</option>
+            <option value="13">Puratchi Thalaivar Dr.M.G.Ramachandran Central Metro</option>
+            <option value="14">Government Estate</option>
+            <option value="15">LIC</option>
+            <option value="16">Thousand Light</option>
+            <option value="17">AG - DMS</option>
+            <option value="18">Teynampet</option>
+            <option value="19">Nandanam</option>
+            <option value="20">Saidapet Metro</option>
+            <option value="21">Little Mount</option>
+            <option value="22">Guindy</option>
+            <option value="23">Arignar Anna Alandur Metro</option>
+            <option value="24">Nanganallur</option>
+            <option value="25">Meenabakkam</option>
+            <option value="26">Chennai International Airport</option>
+            <option value="27">Egmore Metro</option>
+            <option value="28">Nehru Metro</option>
+            <option value="29">Kilpauk</option>
+            <option value="30">Pachaiyappa</option>
+            <option value="31">Shenoy Nagar</option>
+            <option value="32">Anna Nagar Estate </option>
+            <option value="33">Anna Nagar Tower</option>
+            <option value="34">Thirumangalam</option>
+            <option value="35">Koyambedu</option>
+            <option value="36"> Thalavi Dr.J.Jayalalithaa CMBT Metro </option>
+            <option value="37">Arumbakkam</option>
+            <option value="38">Vadapalani</option>
+            <option value="39">Ashok Nagar</option>
+            <option value="40">Ekkattuthangal</option>
+            <option value="41">St. Thomas Mount</option>
+
+        </select><br>
+
+        <label>To -> </label>
+        
+        <select name="to" id="to">
+            <option>Select To Station</option>
+            <option value="1">Wimco Nagar Depot Metro</option>
+            <option value="2">Wimco Nagar Metro</option>
+            <option value="3">Thiruvotriyur Metro</option>
+            <option value="4">Thiruvottriyur Theradi Metro</option>
+            <option value="5">Kalaidipet Metro</option>
+            <option value="6">Tollgate Metro</option>
+            <option value="7">New Washermenpet Metro</option>
+            <option value="8">Tondiarpet Metro</option>
+            <option value="9">Thiyagaraya College Metro</option>
+            <option value="10">Washermenpet Metro</option>
+            <option value="11">Manadi Metro</option>
+            <option value="12">High Court Metro</option>
+            <option value="13">Puratchi Thalaivar Dr.M.G.Ramachandran Central Metro</option>
+            <option value="14">Government Estate</option>
+            <option value="15">LIC</option>
+            <option value="16">Thousand Light</option>
+            <option value="17">AG - DMS</option>
+            <option value="18">Teynampet</option>
+            <option value="19">Nandanam</option>
+            <option value="20">Saidapet Metro</option>
+            <option value="21">Little Mount</option>
+            <option value="22">Guindy</option>
+            <option value="23">Arignar Anna Alandur Metro</option>
+            <option value="24">Nanganallur</option>
+            <option value="25">Meenabakkam</option>
+            <option value="26">Chennai International Airport</option>
+            <option value="27">Egmore Metro</option>
+            <option value="28">Nehru Metro</option>
+            <option value="29">Kilpauk</option>
+            <option value="30">Pachaiyappa</option>
+            <option value="31">Shenoy Nagar</option>
+            <option value="32">Anna Nagar Estate </option>
+            <option value="33">Anna Nagar Tower</option>
+            <option value="34">Thirumangalam</option>
+            <option value="35">Koyambedu</option>
+            <option value="36"> Thalavi Dr.J.Jayalalithaa CMBT Metro </option>
+            <option value="37">Arumbakkam</option>
+            <option value="38">Vadapalani</option>
+            <option value="39">Ashok Nagar</option>
+            <option value="40">Ekkattuthangal</option>
+            <option value="41">St. Thomas Mount</option>
+        </select><hr>
+
+            <button type="button" onclick="debug()">Find my Way</button>
+
+        <div id="demo"></div>
+    </div>
+        <script>
+            function debug(){
+                var x = document.getElementById("from").value;
+                var y = document.getElementById("to").value;
+                var w = document.getElementById("demo");
+                var result = "";
+                var blue = new Array("Wimco Nagar Depot Metro","Wimco Nagar Metro","Thiruvotriyur Metro","Thiruvottriyur Theradi Metro",
+                            "Kalaidipet Metro","Tollgate Metro","New Washermenpet Metro","Tondiarpet Metro","Thiyagaraya College Metro",
+                            "Washermenpet Metro","Manadi Metro","High Court Metro","Puratchi Thalaivar Dr.M.G.Ramachandran Central Metro",
+                            "Government Estate","LIC","Thousand Light","AG - DMS","Teynampet","Nandanam","Saidapet Metro","Little Mount",
+                            "Guindy","Arignar Anna Alandur Metro","Nanganallur","Meenabakkam","Chennai International Airport");
+                var green = new Array("Puratchi Thalaivar Dr.M.G.Ramachandran Central Metro","Egmore Metro","Nehru Metro",
+                            "Kilpauk","Pachaiyappa","Shenoy Nagar","Anna Nagar Estate ","Anna Nagar Tower","Thirumangalam",
+                            "Koyambedu","Puratchi Thalavi Dr.J.Jayalalithaa CMBT Metro ","Arumbakkam","Vadapalani",
+                            "Ashok Nagar","Ekkattuthangal","Arignar Anna Alandur Metro","St. Thomas Mount");
+                 
+                var from = Number(x);            
+                var to = Number(y);
+                var tempc = 0, tempa = 0;
+
+                // both station in blue way
+                if(from <= 26 && to <= 26){
+                    if(from < to){
+                        for(from; from <= to; from++){
+                            result += "<p><span>&#128646 </span>"+" "+blue[from - 1] + "<p><hr>";
+                        }
+                    }
+                    else{
+                        for(from; from >= to; from--){
+                            result += "<p><span>&#128646 </span>"+" "+ blue[from-1] + "<p><hr>";
+                        }
+                    }
+                }
+
+                //both station within green way
+                else if((from >= 27 || from == 13 || from == 23) && (to >= 27 || to == 13 || to == 23)){
+                    if(from == 41){
+                        from = 42;
+                    }
+                    if(to == 41){
+                        to = 42;
+                    }
+                    if(from == 13){
+                        from = 26;
+                    }
+                    if(from == 23){
+                        from = 41;
+                    }
+                    if(to == 13){
+                        to = 26;
+                    }
+                    if(to == 23){
+                        to = 41;
+                    }
+                    if(from < to){
+                        for(from; from <= to; from++){
+                            result += "<p><span>&#128646 </span>"+"&nbsp"+ green[from - 26] + "<p><hr>";
+                        }
+                    }
+                    else{
+                        for(from; from >= to; from--){
+                            result += "<p><span>&#128646 </span>"+"&nbsp"+ green[from - 26] + "<p><hr>";
+                        }
+                    }
+                }
+                //blue to green way not include thomas
+
+                else if(from <= 26 && from != 13 && from != 23 && to >= 27 && to <= 40){
+                    // central point
+
+                    if(from < 13){
+                        tempc += (13 - from);
+                    }
+                    else{
+                        tempc += (from - 13);
+                    }
+
+                    // alandhur point
+                    if(from < 23){
+                        tempa += (23 - from);
+                    }
+                    else{
+                        tempa += (from - 23);
+                    }
+
+                    tempc += (to - 26);
+                    tempa += (41 - to);
+                    if(tempc < tempa){
+                        if(from < 13){
+                            for(from; from <= 13; from++){
+                                result += "<p><span>&#128646 </span>"+" "+blue[from - 1] + "<p><hr>";
+                            }
+                            from = 27;
+                                result += "<h3>Change to Green Way</h3><hr>"
+                            for(from; from <= to; from++){
+                                result += "<p><span>&#128646 </span>"+"&nbsp"+ green[from - 26] + "<p><hr>";
+                            }
+                        }
+                        else{
+                            for(from; from >= 13; from--){
+                                result += "<p><span>&#128646 </span>"+" "+blue[from - 1] + "<p><hr>";
+                            }
+                            from = 27;
+                                result += "<h3>Change to Green Way</h3><hr>"
+                            for(from; from <= to; from++){
+                                result += "<p><span>&#128646 </span>"+"&nbsp"+ green[from - 26] + "<p><hr>";
+                            }
+                        }
+                    }
+                    else{
+                        if(from < 23){
+                            for(from; from <= 23; from++){
+                                result += "<p><span>&#128646 </span>"+" "+blue[from - 1] + "<p><hr>";
+                                    count++;
+                            }
+                            from = 40;
+                                result += "<h3>Change to Green Way</h3><hr>"
+                            for(from; from >= to; from--){
+                                result += "<p><span>&#128646 </span>"+"&nbsp"+ green[from - 26] + "<p><hr>";
+                            }
+                        }
+                        else{
+                            for(from; from >= 23; from--){
+                                result += "<p><span>&#128646 </span>"+" "+blue[from - 1] + "<p><hr>";
+                            }
+                            from = 40;
+                                result += "<h3>Change to Green Way</h3><hr>"
+                            for(from; from >= to; from--){
+                                result += "<p><span>&#128646 </span>"+"&nbsp"+ green[from - 26] + "<p><hr>";
+                            }
+                        }
+                    }
+
+                }
+
+                //green to blue way without thomas
+                else if(from >= 27 && from <= 40 &&  to <= 26 && to != 13 && to != 23){
+                    // central point
+
+                    if(to < 13){
+                        tempc += (13 - to);
+                    }
+                    else{
+                        tempc += (to - 13);
+                    }
+
+                    // alandhur point
+                    if(to < 23){
+                        tempa += (23 - to);
+                    }
+                    else{
+                        tempa += (to - 23);
+                    }
+
+                    tempc += (from - 26);
+                    tempa += (41 - from);
+                    if(tempc < tempa){
+                        if(to < 13){
+                            for(from; from >= 26; from--){
+                                result += "<p><span>&#128646 </span>"+" "+green[from - 26] + "<p><hr>";
+                            }
+                            from = 12;
+                                result += "<h3>Change to Blue Way</h3><hr>"
+                            for(from; from >= to; from--){
+                                result += "<p><span>&#128646 </span>"+"&nbsp"+ blue[from - 1] + "<p><hr>";
+                            }
+                        }
+                        else{
+                            for(from; from >= 26; from--){
+                                result += "<p><span>&#128646 </span>"+" "+green[from - 26] + "<p><hr>";
+                            }
+                            from = 14;
+                                result += "<h3>Change to Blue Way</h3><hr>"
+                            for(from; from <= to; from++){
+                                result += "<p><span>&#128646 </span>"+"&nbsp"+ blue[from - 1] + "<p><hr>";
+                            }
+                        }
+                    }
+                    else{
+                        if(to < 23){
+                            for(from; from <= 41; from++){
+                                result += "<p><span>&#128646 </span>"+" "+green[from - 26] + "<p><hr>";
+                            }
+                            from = 22;
+                                result += "<h3>Change to Blue Way</h3><hr>"
+                            for(from; from >= to; from--){
+                                result += "<p><span>&#128646 </span>"+"&nbsp"+ blue[from - 1] + "<p><hr>";
+                            }
+                        }
+                        else{
+                            for(from; from <= 41; from++){
+                                result += "<p><span>&#128646 </span>"+" "+ green[from - 26] + "<p><hr>";
+                            }
+                            from = 24;
+                                result += "<h3>Change to Blue Way</h3><hr>"
+                            for(from; from <= to; from++){
+                                result += "<p><span>&#128646 </span>"+"&nbsp"+ blue[from - 1] + "<p><hr>";
+                            }
+                        }
+                    }
+
+                }
+
+
+                w.innerHTML = result;
+            }
+        </script>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 20px;
+                }
+        
+                label {
+                    font-weight: bold;
+                }
+        
+                select {
+                    width: 250px;
+                    padding: 5px;
+                    margin-bottom: 10px;
+                }
+        
+                button {
+                    padding: 10px 20px;
+                    background-color: #4CAF50;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                }
+        
+                hr {
+                    border: none;
+                    border-top: 1px solid #ddd;
+                    margin: 20px 0;
+                }
+        
+                #demo {
+                    margin-top: 20px;
+                    font-size: 16px;
+                }
+        
+                p {
+                    margin: 5px 0;
+                }
+        
+                span {
+                    font-weight: bold;
+                }
+                #head{
+                    float: left;
+                    width: 60%;
+                    height: 100px;
+                }
+            </style>
+    </body>
+</html>

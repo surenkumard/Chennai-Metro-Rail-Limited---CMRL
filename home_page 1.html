@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>
+            CMRL-Chennai Metro Rail Limited
+        </title>
+        <script>
+            // Ad variations
+            var ads = [
+              '<img src="ads/ad1.jpg" width="100%" height="600px">','<img src="ads/ad2.jpg" width="100%" height="600px">','<img src="ads/ad3.jpg" width="100%" height="600px">','<img src="ads/ad4.jpg" width="100%" height="600px">','<img src="ads/ad5.jpg" width="100%" height="600px">'];
+            function changeAd() {
+              var container = document.getElementById('top-ad-container');
+              var randomAd = ads[Math.floor(Math.random() * ads.length)];
+              container.innerHTML = randomAd;
+            }
+            setInterval(changeAd, 3000);
+
+        // this is for load page
+        document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(showHomePage, 3000);
+        });
+
+        function showHomePage() {
+            const loaderPage = document.getElementById("loader");
+            loaderPage.style.display = "none";
+
+            const homePage = document.getElementById("home");
+            homePage.style.display = 'block';
+        }
+      </script>
+      <link rel="stylesheet" href="stylehome.css">
+    </head>
+    <body>
+        <div class="loader-page" id="loader">
+            <img src="logo/metroloder.gif" width="50%" height="800px">
+            <h1>WELCOME to <br><br> <span>CHENNAI METRO RAIL LIMITED &#128646</span></h1>
+        </div>
+        
+    <div class="home-page" id="home" style="display: none;">  
+
+        <h1 id="head">CHENNAI METRO RAIL LIMITED</h1>
+
+        <div id="logo">
+            <img src="logo/govt-of-india.jpg" alt="Goverment of India" width="10%" height="20%">
+            <img src="logo/metrologo.jpg" alt="Metro Logo" width="20%">
+            <img src="logo/govt-of-tn.jpg" alt="Goverment of TamilNadu" width="10%" height="20%">
+        </div>
+
+        <div id="top-ad-container"></div>
+
+        <h1 id="gap">OUR SERVICES</h1>
+
+        <div id="pages">
+            <div id="balance">
+              <a href="balance_page.php"><img src="logo/balance.jpg"><br><br></a>
+                <a href="balance_page.php">BALANCE</a>
+                <p>Checking your Card Balance is quick and easy. Simply Click on the 'Balance' link bove to find out your current card Balance</p>
+            </div>
+            <div id="recharge">
+              <a href="recharge_page.php"><img src="logo/recharge.jpg"><br><br></a>
+                <a href="choice.html">TICKET & RECHARGE</a>
+                <p>Never worry about running out of funds for your Chennai Metro rail journey again! With our Easy-to-use online recharge service, you can top up your metro card in just a few clicks</p>
+            </div>
+            <div id="fair">
+              <a href="fair page.html"><img src="logo/stopping.jpg"><br><br></a>
+                <a href="fair page.html">STOPPING</a>
+                <p>Our fare calculator helps you estimatethe cost of your metro journey based on your starting and ending stations. Say goodbye to uncertainty and plan your budget ahead of time</p>
+            </div>
+            <div id="map">
+                <a href="map.html"><img src="logo/map.jpg"><br><br></a>
+                <a href="map.html">MAP</a>
+                <p>Include a downloadable and printable version of the Chennai Metro Rail map that users can refer to offline. Highlight important interchange sttins and landmarks along the metro route</p>
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+              <div class="footer-content">
+                <div class="footer-logo">
+                  <h3>Chennai Metro</h3>
+                  <div style="float: right;">&copy;CMRL</div>
+                </div>
+                <div class="footer-icons">
+                    <a href="#" class="fa fa-whatsapp"></a>  
+                  <a href="#" class="fa fa-facebook"></a>
+                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" class="fa fa-instagram"></a>
+                </div>
+              </div>
+            </div>
+          </footer>          
+    </div>
+    <style>
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .footer-logo img {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+      }
+      
+      .footer-logo h3 {
+        margin: 0;
+        font-size: 24px;
+      }
+      
+      .footer-icons a {
+        color: #fff;
+        font-size: 24px;
+        margin-right: 10px;
+      }
+      
+      .footer-icons a:hover {
+        color: #00a0d2; /* Change the color to your desired hover color */
+      }
+    </style>      
+    </body>
+</html>
